@@ -1127,6 +1127,7 @@ static const size_t kModifierEventTypeSpecSize = sizeof(kModifierEventTypeSpec) 
     }
     LOG(@"showVisor %d", fast);
     isHidden = false;
+    [window_ orderFront:nil];
     [self updateStatusMenu];
     [self cacheScreen]; // performs screen pointer caching at this point
     [self cachePosition];
@@ -1162,6 +1163,7 @@ static const size_t kModifierEventTypeSpecSize = sizeof(kModifierEventTypeSpec) 
     if (background) {
         [[background contentView] stopRendering];
     }
+    [window_ orderOut:nil];
 }
 
 #define SLIDE_EASING(x) sin(M_PI_2*(x))
