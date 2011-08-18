@@ -6,6 +6,7 @@ product_title: Visor
 product_subtitle: a system-wide terminal on a hot-key
 download: http://totalterminal.binaryage.com
 downloadtitle: Switch to TotalTerminal
+buttonicon: warning
 downloadsubtitle: Visor has been renamed to TotalTerminal
 repo: http://github.com/darwin/visor
 meta_title: Visor is a system-wide terminal accessible via a hot-key
@@ -35,11 +36,11 @@ shots: [{
 
 ## What's up?
 
-#### Please note that I've changed the name of the program recently.
+#### Please note that I changed the name of the program recently.
 
-#### Visor has [new home](http://totalterminal.binaryage.com) and is called **TotalTerminal** now. 
+#### Visor has a [new home](http://totalterminal.binaryage.com) and it is called **TotalTerminal** now.
 
-#### Don't worry it is still free and open-source and I will continue to support TotalTerminal in the future.
+#### Don't worry it is still open-source and I will continue to support TotalTerminal in the future.
 
 ## Installation
 
