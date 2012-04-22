@@ -1,5 +1,5 @@
 ---
-layout: product2
+layout: product
 title: Visor is a system-wide terminal accessible via a hot-key
 product: visor
 product_title: Visor
