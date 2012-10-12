@@ -34,13 +34,11 @@ shots: [{
 }]
 ---
 
-## What's up?
-
-#### Please note that I've changed the name of the program some time ago.
+## Visor renamed to TotalTerminal
 
 #### Visor has a [new home](http://totalterminal.binaryage.com) and it is called **TotalTerminal** now.
 
-#### Don't worry it is still open-source and I will continue to support TotalTerminal in the future.
+Don't worry it is still open-source and I will continue to support TotalTerminal in the future.
 
 ## Installation
 
