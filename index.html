@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/"
+      xmlns:fb="http://developers.facebook.com/schema/"
+      
+>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>Visor is a system-wide terminal accessible via a hot-key</title>
+        
+        <link rel="canonical" href="http://visor.binaryage.com">
+        
+        
+        <meta name="title" content="Visor is a system-wide terminal accessible via a hot-key" />
+        
+        
+        <meta name="description" content="Visor is just a light-weight plugin for Terminal.app (SIMBL)" />
+        
+        
+        <meta name="keywords" content="visor,terminal,osx,simbl,binaryage,productivity,software" />
+        
+        
+        <link rel="image_src" href="http://www.binaryage.com/base/img/icons/visor-256.png" />
+        
+        <meta name="google-site-verification" content="N_xzdr6ymSUQFhAEvQg7f-sp1JAeJCdW2JuaRg-da0w" />
+        <meta property="fb:admins" content="antonin.hildebrand" />
+        
+            
+                <meta property="og:email" content="support@binaryage.com" />
+            
+            
+                <meta property="og:description" content="Visor is a system-wide terminal for OSX available on a hot-key" />
+            
+            
+                <meta property="og:site_name" content="BinaryAge website" />
+            
+            
+                <meta property="og:type" content="product" />
+            
+            
+                <meta property="og:title" content="Visor" />
+            
+            
+                <meta property="og:url" content="http://visor.binaryage.com" />
+            
+            
+                <meta property="og:image" content="http://www.binaryage.com/base/img/icons/visor-256.png" />
+            
+        
+        
+        <!-- test comment - hello world! -->
+
+        <link href="http://www.google.com/profiles/antonin.hildebrand" rel="me" type="text/html" />
+        <link href="http://feeds.feedburner.com/binaryage-blog" type="application/atom+xml" rel="alternate" title="Ideas from BinaryAge" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        
+        <script type="text/javascript" charset="utf-8">
+            // give the custom font 5s to load, otherwise enable simple font visibility
+            setTimeout(function() {
+                $('html').addClass('wf-fake-active');
+            }, 2000);
+        </script>
+        
+        <style type="text/css">
+            /* prevent visible font switching - this is also repeated in global.styl for fastspring compatibility!  */
+            .js .wf {
+                opacity: 0 !important;
+                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0) !important;
+                -webkit-transition: opacity 0.5s ease 0s;
+                -moz-transition: opacity 0.5s ease 0s;
+                -o-transition: opacity 0.5s ease 0s;
+                transition: opacity 0.5s ease 0s;
+            }
+            .wf-active .wf,
+            .wf-fake-active .wf {
+                opacity: 1 !important;
+                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100) !important;
+            }
+        </style>
+        
+        
+
+        <link rel="stylesheet" href="/base/css/site.css" type="text/css">
+    
+        
+        
+        
+        
+        <!-- SCRIPTS START -->
+        <script type="text/javascript" charset="utf-8">
+            /*
+            CSS Browser Selector v0.4.0 (Nov 02, 2010)
+            Rafael Lima (http://rafael.adm.br)
+            http://rafael.adm.br/css_browser_selector
+            License: http://creativecommons.org/licenses/by/2.5/
+            Contributors: http://rafael.adm.br/css_browser_selector#contributors
+            */
+            function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; css_browser_selector(navigator.userAgent);
+        </script>
+        <script type="text/javascript" charset="utf-8">
+            // define dummy replacements for firebug functionality (needed for Opera)
+            if (!window.console) {
+                window.console = {};
+                function fn() {
+                    opera.postError(arguments);
+                };
+                ['log', 'debug', 'info', 'warn', 'error', 'assert', 'dir', 'dirxml', 'group', 'groupEnd', 
+                'time', 'timeEnd', 'count', 'trace', 'profile', 'profileEnd'].forEach(function(name) {
+                    window.console[name] = fn;
+                });
+            }            
+            (function() {
+                    var names = ["log", "debug", "info", "warn", "error", "assert", "dir", "dirxml", "group", "groupEnd", "time", "timeEnd", "count", "trace", "profile", "profileEnd"];
+                    if(!window.console){
+                        window.console = {};
+                    }
+                    for (var i in names) {
+                        window.console[names[i]] = window.console[names[i]] || function(){
+                            return;
+                        };
+                    }
+            })();
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            // https://github.com/carhartl/jquery-cookie
+            function bacookie(key, value, options) {
+                // key and at least value given, set cookie...
+                if (arguments.length > 1 && String(value) !== "[object Object]") {
+                    options = options || {};
+
+                    if (value === null || value === undefined) {
+                        options.expires = -1;
+                    }
+
+                    if (typeof options.expires === 'number') {
+                        var days = options.expires, t = options.expires = new Date();
+                        t.setDate(t.getDate() + days);
+                    }
+
+                    value = String(value);
+
+                    return (document.cookie = [
+                        encodeURIComponent(key), '=',
+                        options.raw ? value : encodeURIComponent(value),
+                        options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+                        options.path ? '; path=' + options.path : '',
+                        options.domain ? '; domain=' + options.domain : '',
+                        options.secure ? '; secure' : ''
+                    ].join(''));
+                }
+
+                // key and possibly options given, get cookie...
+                options = value || {};
+                var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+                return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+            };
+            // parseUri 1.2.2
+            // (c) Steven Levithan <stevenlevithan.com>
+            // MIT License
+
+            function parseUri (str) {
+                var o   = parseUri.options,
+                    m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+                    uri = {},
+                    i   = 14;
+
+                while (i--) uri[o.key[i]] = m[i] || "";
+
+                uri[o.q.name] = {};
+                uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+                    if ($1) uri[o.q.name][$1] = $2;
+                });
+
+                return uri;
+            };
+
+            parseUri.options = {
+                strictMode: false,
+                key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+                q:   {
+                    name:   "queryKey",
+                    parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+                },
+                parser: {
+                    strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+                    loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+                }
+            };            
+        </script>
+
+        <script>
+            function utmx_section(){}function utmx(){};
+        </script>
+        
+
+        <script type="text/javascript">
+            WebFontConfig = { 
+                google: { families: [ 'Play:regular,bold' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
+        </script>
+        
+        
+        <script src="/base/js/code2.js"></script>
+        
+    
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+        </script>
+        
+        <script type="text/javascript">
+            _gaq.push(['_setAccount', 'UA-8404259-1']);
+            _gaq.push(['_addIgnoredRef', '.binaryage.com']); // do not count subdomains as referrer trafic
+            _gaq.push(['_setDomainName', '.binaryage.com']); // track all subdomains with shared cookie
+            _gaq.push(['_setAllowLinker', true]); // important for cross domain user tracking (the session may be passed in URL params)
+            _gaq.push(['_setAllowHash', false]); // do not use url-hash check
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
+    
+        
+        
+        
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        
+        
+        <!-- SCRIPTS END -->
+    </head>
+    <body id="page-visor-index">
+        <div id="topbar">
+            <div class="container topbar">
+                <div class="topbar-buttons">
+                    <div class="topbar-labs wf">
+                        labs
+                    </div>
+                    <div class="topbar-testimonials wf">
+                        testimonials
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header" class="menu-products">
+            <div class="container header">
+                <a href="http://www.binaryage.com" title="BinaryAge Software">
+                    <div class="header-logo">
+                        <div class="header-logo-hover"></div>
+                    </div>
+                </a>
+                
+                <div class="header-motto arrow"></div>
+                <div class="header-selector"></div>
+                <ul class="header-menu">
+                    <li class="menu-item-store wf"><a href="http://www.binaryage.com/store"><span>store</span></a></li>
+                    <li class="menu-item-products wf"><a href="http://www.binaryage.com"><span>products</span></a></li>
+                    <li class="menu-item-blog wf"><a href="http://blog.binaryage.com"><span>blog</span></a></li>  
+                    <li class="menu-item-hints wf"><a href="http://hints.binaryage.com"><span>hints</span></a></li>
+                    <li class="menu-item-support wf"><a href="http://support.binaryage.com"><span>support</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            
+            <div class="wf">
+            <div class="main-product" id="product-visor">
+    <div class="container">
+        <div class="main-product-left span-12">
+            <div class="product-logo-box">
+                <img class="product-icon" src="/base/img/icons/visor-64.png">
+                <div class="product-tagline">
+                    <h1 class="product-title">Visor</h1><div class="plusone-wrapper"><g:plusone size="medium"></g:plusone></div>
+                    <h2 class="product-subtitle">a system-wide terminal on a hot-key</h2>
+                </div>
+            </div>
+            <div class="product-buttons-box">
+                <div class="product-buttons">
+                    
+                    <a id="o-download" href="http://totalterminal.binaryage.com" class="button product-button-warning">
+                        <div><div>Switch to TotalTerminal<div class="product-specs">Visor has been renamed to TotalTerminal</div></div></div>
+                    </a>
+                    
+                    
+                    <div class="clear"></div>
+                </div>
+                <div class="product-note-box">
+                    
+                </div>
+            </div>
+            <div class="social-box">
+                <div class="social-box-inner">
+                    
+                    <div class="retweet">
+                    </div>
+                    <script>
+                        $(".retweet").html(writeCapture.sanitize('<a href="http://twitter.com/share" class="twitter-share-button retweet" data-count="vertical" data-via="binaryage">Tweet</a><scr'+'ipt type="text/javascript" src="http://platform.twitter.com/widgets.js"></scr'+'ipt>'));
+                    </script>
+                    
+                    
+                    
+                    
+                    
+                    <div class="flattr">
+                    </div>
+                    <script>
+                        $('.flattr').html(writeCapture.sanitize('<scr'+'ipt>document.write(\'<iframe width="55" scrolling="no" height="62" frameborder="0" src="http://api.flattr.com/button/view/?uid=0&amp;url=\'+encodeURIComponent(\'http://visor.binaryage.com\')+\'&amp;language=&amp;hidden=0&amp;title=&amp;category=&amp;tags=&amp;description=" border="0" marginheight="0" marginwidth="0" allowtransparency="true"></iframe>\')</scr'+'ipt>'));
+                    </script>
+                    
+                </div>
+                <div class="clear"></div>
+            </div>    
+        </div>
+        <div class="main-product-right span-12 last">
+            <div class="main-screenshot">
+                
+                <div id="screenshot-box-1" class="screenshot-box no-shadow" >
+                    
+                    <a id="o-shot1" href="http://visor.binaryage.com/base/img/visor-mainshot-full.png" class="overlayable" title="Visor Terminal with nice colors!">
+                    
+                        <img src="http://visor.binaryage.com/base/img/visor-mainshot.png"/>
+                        
+                        <div class="zoom-icon"></div>
+                        
+                    
+                    </a>
+                    
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-tabs" id="tabs-visor">
+    <div class="container">
+        <div class="tab-bar">
+            <ul class="tabs"></ul> 
+        </div>
+        <div class="panes"></div>
+    </div>
+</div>
+
+<div class="main-content-here" style="display:none">
+    <h2>What's up?</h2>
+
+<h4>Please note that I've changed the name of the program some time ago.</h4>
+
+<h4>Visor has a <a href="http://totalterminal.binaryage.com">new home</a> and it is called <strong>TotalTerminal</strong> now.</h4>
+
+<h4>Don't worry it is still open-source and I will continue to support TotalTerminal in the future.</h4>
+
+<h2>Installation</h2>
+
+<ol>
+<li><strong><a href="http://www.culater.net/software/SIMBL/SIMBL.php">Install SIMBL</a></strong> and <span style="color:#d22">make sure you have latest SIMBL 0.9.x</span></li>
+<li>Place Visor.bundle into <code>~/Library/Application Support/SIMBL/Plugins</code> (create this directory if it does not already exist)</li>
+<li>Relaunch Terminal.app - You should now see the Visor Status Menu Item</li>
+<li>Configure your keyboard trigger by selecting the Visor Status Menu Item -> <code>Visor Preferences ...</code> and edit your keyboard <code>hot-key</code></li>
+</ol>
+
+
+<h4>You can now trigger Visor with your hot-key from any application to get an instant terminal session.</h4>
+
+<p>To hide Visor, you can either:</p>
+
+<ul>
+<li>re-trigger with your key-combo</li>
+<li>optionally, you can click off the Visor window</li>
+</ul>
+
+
+<h3>Compatibility</h3>
+
+<ul>
+<li><p><strong>Visor 2.2</strong> is tested to work with</p>
+
+<ul>
+<li>SIMBL 0.9.x on Snow Leopard (both 32-bit and 64-bit)</li>
+<li>SIMBL 0.8.x on Leopard (32-bit)</li>
+</ul>
+</li>
+<li><p><strong>Visor 2.1</strong> is tested to work with</p>
+
+<ul>
+<li>SIMBL 0.9.x on Snow Leopard (both 32-bit and 64-bit)</li>
+<li>SIMBL 0.8.x on Leopard (32-bit)</li>
+</ul>
+</li>
+<li><p><strong>Visor 2.0</strong> is tested to work with</p>
+
+<ul>
+<li>SIMBL 0.8.x on Snow Leopard but Terminal.app has to be forced to run in 32-bit mode</li>
+<li>SIMBL 0.8.x on Leopard</li>
+</ul>
+</li>
+<li><p><strong>Visor 1.9</strong> is tested to work with</p>
+
+<ul>
+<li>SIMBL 0.8.x on Leopard</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong><a href="http://github.com/darwin/visor/downloads">Where can I get older versions?</a></strong></p>
+
+<h2>Source</h2>
+
+<h3>Installation from source</h3>
+
+<h4>Prerequisities:</h4>
+
+<ul>
+<li><a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a></li>
+<li>ruby + rubygems</li>
+<li>XCode 3.2+</li>
+<li>zip/unzip</li>
+</ul>
+
+
+<h4>Custom installation steps:</h4>
+
+<pre><code>git clone git://github.com/darwin/visor.git
+cd visor
+rake
+rake install
+</code></pre>
+
+<p>Feel free to <a href="http://github.com/darwin/visor">fork and contribute</a>.</p>
+
+<p>Source code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a></p>
+
+<h2>FAQ</h2>
+
+<h4>I like the idea, but I want to use Terminal.app features. Do you plan to support tabs/unicode/whatever?</h4>
+
+<blockquote><p>Visor is just a light-weight plugin for Terminal.app (SIMBL). You should be able to use most of Terminal.app features with Visor. The only broken feature is "Windows Groups".</p></blockquote>
+
+<h4>Does Visor work on OSX 10.6 (Snow Leopard)?</h4>
+
+<blockquote><p>64-bit Terminal.app in Snow Leopard is supported by Visor 2.1 and later.</p></blockquote>
+
+<h4>Does Visor work on OSX 10.5 (Leopard)?</h4>
+
+<blockquote><p>Leopard is supported by Visor 1.5 and later, the best version is Visor 2.1.</p></blockquote>
+
+<h4>Does Visor work on OSX 10.4 (Tiger)?</h4>
+
+<blockquote><p>Tiger was supported by early Visors (pre 1.5). It was in the days when I was a young Windows hacker. I will never look back, so your only chance is to upgrade to (Snow) Leopard.</p></blockquote>
+
+<h4>How do I uninstall Visor?</h4>
+
+<blockquote><p>Visor is a standard SIMBL plugin. Remove <code>Visor.bundle</code> from <code>~/Library/Application Support/SIMBL/Plugins</code>:</p></blockquote>
+
+<pre><code>rm -rf ~/Library/Application\ Support/SIMBL/Plugins/Visor.bundle
+</code></pre>
+
+<blockquote><p>Or alternatively you can run <code>rake uninstall</code> task if you have a cloned git repo.</p></blockquote>
+
+<h4>Where are Visor settings stored?</h4>
+
+<blockquote><p>Visor settings are stored with Terminal.app settings. You can <code>open ~/Library/Preferences/com.apple.Terminal.plist</code> and tweak the values (better to do this when Terminal.app is not running).
+If you have troubles with Visor settings or the generated Visor profile, delete this file and restart Terminal.app. The file will be recreated with default values.</p></blockquote>
+
+<h4>My Visor menu-bar icon is dimmed out. My hot-key doesn't work and just beeps. What's wrong?</h4>
+
+<blockquote><p>There can be only one visor-ed terminal window in the system. If you close this terminal window (for example <code>Control+D</code> or typing exit in shell), Visor gets into the disabled state you are describing. Just open a new terminal window and it gets visor-ed again. You can do this for example by clicking on Terminal.app icon in the Dock.</p></blockquote>
+
+<h4>How can I open a new terminal window the old way, as a classic OSX window?</h4>
+
+<blockquote><p>If there is a visor-ed terminal window (Visor menu-bar icon is active) every new terminal window will be opened as a classic OSX window. In other words, open at least two terminal windows. The second one will be classic terminal window for sure.</p></blockquote>
+
+<h4>How can I change the height of Visor?</h4>
+
+<blockquote><p>Go to Terminal.app's Preferences -> Window -> Rows</p></blockquote>
+
+<h4>How can I stick Visor to left screen edge?</h4>
+
+<blockquote><p>Look for the "Position" option in Visor Preferences and pick "Left-Stretch" window placement.</p></blockquote>
+
+<h4>How can I change the width of Visor?</h4>
+
+<blockquote><p>By default Visor window stretches to the full screen width. Set some non-stretching positioning for Visor window in Visor Preferences, then Go to Terminal.app's Preferences -> Window -> Columns.</p></blockquote>
+
+<h4>Is it possible to show Visor only on a secondary monitor?</h4>
+
+<blockquote><p>Go to Visor Preferences -> Screen</p></blockquote>
+
+<h4>Is it possible to see Visor on every Space?</h4>
+
+<blockquote><p>Visor 1.6 does not respect Spaces settings (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=52">Issue 52</a>). Visor 1.7+ forces its window to be visible on every space.
+You may disable this in Visor Preferences. Note: Spaces configuration for Terminal.app doesn't apply to the visor-ed terminal window, it is effective only for other (classic) terminal windows.</p></blockquote>
+
+<h4>I want to keep different preferences for Visor and other (classic) terminal windows. What is the best way manage this?</h4>
+
+<blockquote><p>Well this was quite a pain point in older Visor releases. From Visor 2.0 there must be a profile in Terminal.app called "Visor". Visor-ed window always use the "Visor" profile for opening new tabs
+(regardless of "default profile" or "startup profile" settings in Terminal.app). To make your life easier Visor creates this profile for you if it does not exist and fills in Darwin's preferred Visor settings (black background with fine colors, 90% opacity).</p></blockquote>
+
+<h4>How can I revert to Darwin's Visor profile?</h4>
+
+<blockquote><p>You can always delete (or better rename) the "Visor" profile and relaunch Terminal.app. Visor will then create a new "Visor" profile from scratch with Darwin's preferred settings.</p></blockquote>
+
+<h4>Do I need to install TerminalColours SIMBL with Visor?</h4>
+
+<blockquote><p>No, TerminalColours is integrated into Visor 2.0 and later. My motivation was to allow people to get cool Visor colors out of the box (with generated Visor profile).</p></blockquote>
+
+<h4>Do I need to install CopyOnSelect SIMBL with Visor?</h4>
+
+<blockquote><p>No, CopyOnSelect is integrated into Visor 2.0 and later. It is a configurable option in Visor Preferences (disabled by default).</p></blockquote>
+
+<h2>Changelog</h2>
+
+<h4>The original Visor 1.5 brought to you by Alcor (<a href="http://blacktree.com">Blacktree</a>), kudos man!</h4>
+
+<h3>History</h3>
+
+<ul>
+<li><p><strong>v2.2</strong> (26.09.2009) code name: <strong>Stable Visor</strong></p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] fixed crash when <a href="http://github.com/darwin/visor/issues/closed#issue/37">changing display settings</a> or <a href="http://github.com/darwin/visor/issues/closed#issue/38">fast-switching user</a></li>
+<li>[<a href="http://github.com/darwin">darwin</a>] fixed some <a href="http://github.com/darwin/visor/issues/closed#issue/33">redrawing issues</a></li>
+<li>[<a href="http://github.com/darwin">darwin</a>] using new API on Snow Leopard for returning focus to previous application (not using applescript => faster!)</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] fixed rake tasks, xcodebuild might fail in some rare situations</li>
+</ul>
+</li>
+<li><p><strong>v2.1</strong> (21.09.2009) code name: <strong>Lovely Visor</strong> &lt;= <a href="http://code.google.com/p/qsb-mac/">Google's QSB</a> codebase made this release possible!</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] support for SIMBL 0.9.x</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] 64-bit version for 64-bit Terminal.app in Snow Leopard</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] embedded Visor preferences pane into Terminal.app Preferences Window</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] you can activate Visor by double tapping Control key (disabled by default)</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] generated Visor profile does not use bold bright fonts</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] resetting window size is performed only in rare cases of visor reconfiguration (fixed <a href="http://github.com/darwin/visor/issues/closed#issue/27">headaches with 'jumping lines'</a>, also fixed <a href="http://github.com/darwin/visor/issues/closed/#issue/13">performance issue</a>)</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] 'restore app key focus' applescript checks if app which has to be restored is still alive (prevents <a href="http://github.com/darwin/visor/issues/closed#issue/8">reopening closed app when leaving Visor</a>)</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] removed dependency on QuartzCore.framework</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] XCode project cleanup, executable now includes binaries for x86_64, i386 and ppc architectures</li>
+</ul>
+</li>
+<li><p><strong>v2.0.1</strong> (11.09.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Fixed resizing issue (<a href="http://github.com/darwin/visor/issues/closed#issue/22">Issue #22</a>)</li>
+</ul>
+</li>
+<li><p><strong>v2.0</strong> (06.09.2009) code name: <strong>Snow Visor</strong></p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Compatibility with OSX 10.6 (Snow Leopard)</li>
+<li>[<a href="http://github.com/ciaran">ciaran</a>+<a href="http://github.com/evanphx">evanphx</a>+<a href="http://github.com/darwin">darwin</a>] integrated <a href="http://ciaranwal.sh/2007/11/01/customising-colours-in-leopard-terminal">Terminal Colours SIMBL</a></li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor uses profile "Visor" or creates a new one if it does not exist (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=71">Issue 57</a>, <a href="http://github.com/darwin/visor/issues/closed#issue/19">Issue #19</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] "Visor" profile is created with finest settings from Darwin's Visor profile including setup for Terminal Colours (black background with fine colors, 90% opacity)</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor stays hidden after Terminal.app launch (seamless experience when including Terminal.app into startup items)</li>
+<li>[<a href="http://github.com/genki">genki</a>+<a href="http://github.com/darwin">darwin</a>] integrated <a href="http://github.com/genki/terminalcopyonselect">CopyOnSelect SIMBL</a></li>
+</ul>
+</li>
+<li><p><strong>v1.9.1</strong> (14.04.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Fixed missing "Visor Preferences..." menu item (thanks <a href="http://github.com/gestes">gestes</a>).</li>
+</ul>
+</li>
+<li><p><strong>v1.9</strong> (14.04.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Fixed bottom window is off-screen in left-stretch/right stretch mode (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=60">Issue 60</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Window size gets properly reset during switching Position in Preferences.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Added "Full Screen" option into Positions in Preferences (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=57">Issue 57</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Debug messages are not being logged in Release builds.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor restores focus of previous app only in case of closing with hotkey or ESC key (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=67">Issue 67</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor does not hang when trying to return focus to a hanging application (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=64">Issue 64</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Going to an empty space no more triggers visor terminal to appear (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=58">Issue 58</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Menu item changes title to "Hide Visor" when Visor is opened (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=43">Issue 43</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Fixed: Switching Space let Visor show and hide in an infinite loop (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=61">Issue 61</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Removed option "Main Screen" from Preferences/Screen (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=59">Issue 59</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Removed pin icon, toggle added under status menu (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=56">Issue 56</a>).</li>
+</ul>
+</li>
+<li><p><strong>v1.8.1</strong> (05.03.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Fixed "NSUserDefaults setString:ForKey:" crash on startup (affected upgrading users from 1.7 to 1.8). Reported by <a href="http://github.com/kleinman">Kleinman</a>, thanks.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Compilation from sources clears previous build folder (this could possibly make troubles for people developing Visor and then doing release [like me]).</li>
+</ul>
+</li>
+<li><p><strong>v1.8</strong> (04.03.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>+<a href="http://github.com/cglee">cglee</a>] Visor can be positioned to other screen edges. Also non-stretching mode is possible. See Position in Visor Preferences.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor window can be pinned, so it doesn't auto-hide (see icon in the top-right window corner).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Better behavior of confirmation sheets (Previously, sheet might appear on different space or might be hidden behind Visor window).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Custom build from sources is marked as "Custom", no need to specify version.</li>
+</ul>
+</li>
+<li><p><strong>v1.7</strong> (12.02.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor appears on every space by default. You may disable it in Visor Preferences.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor is correctly hidden in fullscreen mode.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor plays nicely when screen resolution changes.</li>
+<li>[<a href="http://github.com/pumpkin">pumpkin</a>] Fixed extra shadow under menu-bar.</li>
+<li>[<a href="http://github.com/blinks">blinks</a>] Fixed rake install task for case there is no SIMBL plugins directory.</li>
+</ul>
+</li>
+<li><p><strong>v1.6</strong> (03.02.2009)</p>
+
+<ul>
+<li>[<a href="http://github.com/darwin">darwin</a>] Build infrastructure.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] It is possible to specify on which screen visor will appear - see preferences (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=15">Issue 15</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor exits gratefully without locking UI (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=50">Issue 50</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Visor becomes inactive when you close visor-ed terminal window or exit it's shell (fixes <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=10">Issue 10</a>).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] When inactive, Visor eats next coming terminal window (right click terminal.app icon and select "new window").</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Re-implemented window sliding animation using standard NSWindow functions, should fix weird bugs with mouse cursor state.</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Removed support for Quartz powered backgrounds (want simpler codebase!).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Gentle terminal window hijacking (solves <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=5">Issue 5</a>, <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=6">Issue 6</a> and related problems. What more? It properly enables <a href="http://onrails.org/articles/2007/11/28/scripting-the-leopard-terminal">applescript automation in visor-ed terminal</a>, which was my original motivation to get dirty with Visor internals).</li>
+<li>[<a href="http://github.com/darwin">darwin</a>] Whenever you open Visor window, it steals focus and you may start typing without touching mouse. Visor is a good guy and returns the focus back to original app when being hidden. I said ... don't touch that mouse!</li>
+<li>[<a href="http://github.com/torsten">torsten</a>] Fixed the "White Line Bug" (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=16">Issue 16</a>).</li>
+<li>[<a href="http://github.com/torsten">torsten</a>] Added the option to hide Visor on Escape press. Press Shift+Escape, if you need a "Escape" in the Terminal.</li>
+<li>[<a href="http://github.com/torsten">torsten</a>] If you start Visor you get now initial focus. (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=20">Issue 20</a>).</li>
+</ul>
+</li>
+<li><p><strong>v1.5a1</strong> (Nov 2007?)</p>
+
+<ul>
+<li>Leopard Support</li>
+</ul>
+</li>
+<li><p><strong>v1.2.1</strong></p>
+
+<ul>
+<li>Fixed Choose File button</li>
+</ul>
+</li>
+<li><p><strong>v1.2</strong></p>
+
+<ul>
+<li>Added Animation Speed Preferences</li>
+<li>Added Transition Preferences for Slide and Fade (both optional)</li>
+<li>Menu Item is optional</li>
+<li>Fix for users with Dock on top left or right (Visor appears above the dock)</li>
+<li>Fixes animation glitches from alternate unsupported version.</li>
+<li>New icon</li>
+<li>No longer forked code - one version.</li>
+</ul>
+</li>
+<li><p><strong>v1.1</strong> (drparallax's unsupported version?)</p>
+
+<ul>
+<li>Dismissing visor now 'slides up'</li>
+<li>Options for animation</li>
+<li>New icon</li>
+</ul>
+</li>
+<li><p><strong>v1.0</strong></p>
+
+<ul>
+<li>Initial release</li>
+</ul>
+
+
+<p>... hic sunt leones ...</p></li>
+</ul>
+
+
+<h2>Links</h2>
+
+<h4>Source code</h4>
+
+<ul>
+<li><a href="http://github.com/darwin/visor">sources are hosted at GitHub</a></li>
+</ul>
+
+
+<h4>Original Visor 1.5</h4>
+
+<ul>
+<li><a href="http://blacktree.com">Blacktree Homepage</a></li>
+</ul>
+
+
+<h3>Articles</h3>
+
+<ul>
+<li><strong><a href="http://maxime.sh/2010/01/donnez-du-style-a-votre-terminal-avec-visor">Donnez du style à votre terminal avec Visor</a></strong> by Maxime</li>
+<li><strong><a href="http://www.rngtng.com/2009/08/14/quake-like-terminal-on-mac-os-x-visor-plugin/">Quake like Terminal on Mac OS X: Visor Plugin</a></strong> by Tobi</li>
+<li><strong><a href="http://www.metaskills.net/2009/8/18/visor-terminal-on-snow-leopard">Visor Terminal on Snow Leopard</a></strong> by Ken Collins</li>
+<li><strong><a href="http://aralbalkan.com/2366">Getting Terminal Visor for OSX working with Snow Leopard</a></strong> by Aral Balkan</li>
+<li><strong><a href="http://terrychay.com/blog/article/visor-in-snow-leopard.shtml">Re-enabling Visor in Snow Leopard</a></strong> by Terry Chay</li>
+<li>Featured Project in <strong><a href="http://github.com/blog/346-github-rebase-13">Rebase #13</a></strong>, thanks <a href="http://github.com/qrush">qrush</a>!</li>
+</ul>
+
+
+<h2>Special Guest</h2>
+
+<h3>Ben Stiglitz about Terminal.app</h3>
+
+<div>Ben is the author of Terminal.app. Kudos!</div>
+
+
+<p><embed src='http://rubyconf2008.confreaks.com/player.swf' height='260' width='640' allowscriptaccess='always' allowfullscreen='true' flashvars='file=http%3A%2F%2Frubyconf2008.confreaks.com%2Fvideos%2Fterminalapp-small.mp4&image=images%2Fterminalapp-preview.jpg&plugins=viral-1'/></p>
+
+</div>
+
+<script>
+$(function() { 
+    var panes = $('.panes');
+    var tabs = $('.tabs');
+    var cur;
+    var items = $('.main-content-here > *');
+    items.each(function(i) {
+        var el = $(this);
+        var tag = el.attr('tagName');
+        if (tag=='SCRIPT') return;
+        if (tag=='NOSCRIPT') return;
+        if (tag=='STYLE') return;
+        if (el.hasClass('panes') || el.hasClass('tabs')) return;
+        if (el.attr('tagName')=='H2') {
+            var name = el.html();
+            var id = name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            var li = $('<li/>');
+            var a = $('<a class=\"tbx\"/>').attr('href', '#'+id).html(name);
+            li.append(a);
+            a.append('<div class="shadow"></div>');
+            tabs.append(li);
+            cur = $('<div/>').addClass('wikistyle').addClass(id);
+            panes.append(cur);
+            el.remove();
+            cur.append($("<h2/>").html(name));
+        } else {
+            if (cur) {
+                cur.append(el);
+            }
+        }
+    });
+    $("ul.tabs").tabs("div.panes > div");
+    $("ul.tabs a").history();
+});
+</script>
+
+<script>
+    $(function() {
+        $(".product-thumbs-scrollable").scrollable({
+            size: 5
+        });
+
+        $(".product-thumbs-items img").click(function() {
+            var img = $(this);
+            var visible = $('.screenshot-box:visible');
+            var box = $(img.attr('rel'));
+            if (box[0] === visible[0]) return; // optimization to not fade when clicked same image or during initial load
+            visible.fadeOut();
+            box.fadeIn();
+        }).filter(":first").click(); // when page loads simulate a "click" on the first image
+    });
+</script>
+
+<div class="simple_overlay" id="overlay-gallery" style="display:none"> 
+    <a class="overlay-prev">prev</a> 
+    <a class="overlay-next">next</a> 
+    <div class="overlay-info"></div>
+    <img class="overlay-progress" src="http://visor.binaryage.com/base/img/twitter-loader.gif" /> 
+</div>
+
+<script>
+(function() {
+    $('.overlayable').overlay({
+        expose: '#f1f1f1',
+        target: '#overlay-gallery'
+    }).gallery({
+        disabledClass: 'disabled-overlay',
+        prev: '.overlay-prev',
+        next: '.overlay-next',
+        info: '.overlay-info',
+        progress: '.overlay-progress',
+        opacity: 1,
+        speed: 200, 
+        template: '[${index}/${total}] ${title}'
+    });
+})();
+</script>
+
+            </div>
+            
+            <div class="clear"></div>
+        </div>
+        <div id="tweets-section">
+            <div class="container" style="position: relative">
+                <ol id="tweets" class="statuses"></ol>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <div class="container">
+                <div class="footer-separator"></div>
+                <div class="footerbox">
+                    
+                    <div class="facebook-like-button-wrapper">
+                        <fb:like width="650" href="http://visor.binaryage.com" layout="standard" show_faces="false" font="arial"></fb:like>
+                    </div>
+                    
+                    <div class="footer-links wf">
+                        
+                        <a href="javascript:GSFNFeedbackWidget.show()">feedback</a> | 
+                        
+                        
+                        <a href="http://github.com/darwin/visor">source code</a> | 
+                        
+                        <a href="http://www.binaryage.com/about.html">contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    
+        
+
+        
+    
+        
+        <div id="fb-root"></div>
+        <script type="text/javascript">
+            window.fbAsyncInit = function() {
+                FB.init({appId: '332451499524', status: true, cookie: true, xfbml: true});
+            };
+            (function() {
+                var e = document.createElement('script'); e.async = true;
+                e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+                document.getElementById('fb-root').appendChild(e);
+            }());
+        </script>
+        
+
+        
+        
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
+                var initialized;
+                $('.topbar-testimonials').bind('click', function() {
+                    if (window.SSTracker) {
+                        SSTracker.pushState('praise');
+                    }
+            
+                    if (!initialized) {
+                        $("#tweets").tweet({
+                            user: "binaryage"
+                        });
+                        initialized = true;
+                    }
+                });
+        
+                // trigger page states
+                setTimeout(function() { // give other code some time to init
+                    var hash = location.hash.substring(1);
+                    if (hash.substring(0,2)=="o-") {
+                        $('#'+hash).trigger('click');
+                    }
+                }, 500);
+            });
+    
+            // localhost debug
+            $(function() {
+                var host = document.location.host;
+                if (host.substring(host.length-3)=='org') {
+                    $('a').each(function() {
+                        var el = $(this);
+                        var href = el.attr('href');
+                        if (href) {
+                            if (href.match('binaryage.com')) {
+                                href = href.replace('binaryage.com', 'binaryage.org');
+                            }
+                            var loc = document.location+"";
+                            if (href.substring(0, 4)!="http" && href.match(/\/[^.]+$/i)) { 
+                                // this is for local jekyll server inconsistency
+                                if (host.substring(loc.length-1)=="2") { 
+                                    // next website version
+                                    href += "2";
+                                }
+                                if (loc.substring(loc.length-6)=="2.html") { 
+                                    // next website version
+                                    href += "2";
+                                }
+                                href += ".html";
+                            }
+                            el.attr('href', href);
+                        }
+                    });
+                }
+            });
+            
+            (function(){
+                // store the referrer in cookie for later reuse
+                var parts = parseUri(document.location+"");
+                var referrer = parts.queryKey["referrer"];
+                if (referrer) {
+                    bacookie("bareferrer", referrer, {path: '/', expires: 14});
+                }
+            })();
+  
+            // cross-domain tracking
+            // http://code.google.com/apis/analytics/docs/tracking/gaTrackingSite.html
+            $('a').live('click', function() {
+                var href = $(this).attr("href")+"";
+                // pass referrer if available, FastSpring will report it on final order
+                var referrer = bacookie("bareferrer");
+                if (referrer) {
+                    href += (href.indexOf("?")==-1?"?":"&")+"referrer="+encodeURIComponent(referrer);
+                }
+                var current = document.location+"";
+                // just for switching domains between binaryage.com <-> fastspring.com
+                if ((current.match(/fastspring\.com/) && href.match(/binaryage\.com/)) || 
+                    (current.match(/binaryage\.com/) && href.match(/fastspring\.com/))) {
+                    _gaq.push(['_link', href]);
+                    return false;
+                }
+            });
+        </script>
+        
+
+        
+        <div id="getsatifucktion"></div>
+        <div id="getsatifucktion2"></div>
+        <script type="text/javascript" charset="utf-8">
+            $("#getsatifucktion").html(writeCapture.sanitize('<scr'+'ipt type="text/javascript" src="http://s3.amazonaws.com/getsatisfaction.com/javascripts/feedback-v2.js"></scr'+'ipt>', {
+                done: function() {
+                    if (typeof window.GSFN == "object") {
+                        window.GSFNFeedbackWidget = new GSFN.feedback_widget({
+                            container: "getsatifucktion2",
+                            display: "overlay",
+                            company: "binaryage",
+                            placement: "hidden",
+                            color: "#656565",
+                            style: "idea"
+                        });
+                    }
+                }
+            }));
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            
+            t.setAttribute('data-site-id', '4f10d65d844d52139500000b');
+            
+            t.src = '//secure.gaug.es/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        
+
+        
+        <div class="suck-area">
+            <div class="container">
+                <div class="fixed-wrapper">
+                    <div class="suck-dialog suck-ie5" style="display:none">
+                        This page is using the latest HTML5 techniques. You are using old Internet Explorer 5. Please <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">upgrade to Internet Explorer 9</a> for pixel-perfect experience. Thanks!
+                        <div class="suck-close" onclick="$(this).parent().addClass('suck-closed'); bacookie('suck-closed', '1', {path: '/'})"></div>
+                        <div class="suck-icon"></div>
+                    </div>
+                    <div class="suck-dialog suck-ie6" style="display:none">
+                        This page is using the latest HTML5 techniques. You are using old Internet Explorer 6. Please <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">upgrade to Internet Explorer 9</a> for pixel-perfect experience. Thanks!
+                        <div class="suck-close" onclick="$(this).parent().addClass('suck-closed'); bacookie('suck-closed', '1', {path: '/'})"></div>
+                        <div class="suck-icon"></div>
+                    </div>
+                    <div class="suck-dialog suck-ie7" style="display:none">
+                        This page is using the latest HTML5 techniques. You are using old Internet Explorer 7. Please <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">upgrade to Internet Explorer 9</a> for pixel-perfect experience. Thanks!
+                        <div class="suck-close" onclick="$(this).parent().addClass('suck-closed'); bacookie('suck-closed', '1', {path: '/'})"></div>
+                        <div class="suck-icon"></div>
+                    </div>
+                    <div class="suck-dialog suck-ie8" style="display:none">
+                        This page is using the latest HTML5 techniques. You are using old Internet Explorer 8. Please <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">upgrade to Internet Explorer 9</a> for pixel-perfect experience. Thanks!
+                        <div class="suck-close" onclick="$(this).parent().addClass('suck-closed'); bacookie('suck-closed', '1', {path: '/'})"></div>
+                        <div class="suck-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" charset="utf-8">
+            if (bacookie('suck-closed')) {
+                $('.suck-dialog').addClass('suck-closed');
+            }
+        </script>
+        
+    </body>
+</html>
