@@ -36,7 +36,7 @@ shots: [{
 
 ## What's up?
 
-#### Please note that I changed the name of the program recently.
+#### Please note that I've changed the name of the program some time ago.
 
 #### Visor has a [new home](http://totalterminal.binaryage.com) and it is called **TotalTerminal** now.
 
