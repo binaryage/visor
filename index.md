@@ -34,7 +34,7 @@ shots: [{
 }]
 ---
 
-## Visor renamed to TotalTerminal
+## Visor retired
 
 #### Visor has a [new home](http://totalterminal.binaryage.com) and it is called **TotalTerminal** now.
 
