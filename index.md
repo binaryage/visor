@@ -12,7 +12,7 @@ repo: http://github.com/darwin/visor
 meta_title: Visor is a system-wide terminal accessible via a hot-key
 meta_keywords: visor,terminal,osx,simbl,binaryage,productivity,software
 meta_description: Visor is just a light-weight plugin for Terminal.app (SIMBL)
-meta_image: http://www.binaryage.com/base/img/icons/visor-256.png
+meta_image: http://www.binaryage.com/shared/img/icons/visor-256.png
 facebook: 1
 retweet: 1
 buzz: 1
@@ -25,12 +25,12 @@ ogmeta: {
     type: "product",
     title: "Visor",
     url: "http://visor.binaryage.com",
-    image: "http://www.binaryage.com/base/img/icons/visor-256.png"
+    image: "http://www.binaryage.com/shared/img/icons/visor-256.png"
 }
 shots: [{
     title: "Visor Terminal with nice colors!",
-    thumb: "/base/img/visor-mainshot.png",
-    full: "/base/img/visor-mainshot-full.png"
+    thumb: "/shared/img/visor-mainshot.png",
+    full: "/shared/img/visor-mainshot-full.png"
 }]
 ---
 
