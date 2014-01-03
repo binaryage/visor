@@ -474,7 +474,7 @@ div#gsfn_list_widget span.time{color:#999;margin-left:3px}
 .changelogx h4 a{background:url("http://static.binaryage.com/117432b8_shared_img2_icon-download.png") no-repeat 6px 0;padding:0 6px 0 32px;position:relative;top:1px;}
 .changelogx h4 span{padding:0 6px 0 32px}
 .changelogx h5{margin:0;font-size:11px;color:#888;line-height:11px;font-weight:normal;padding-left:14px;float:left;padding-top:20px}
-.changelogx .blog-post-pointer{background-color:#fcffea;font-size:11px;padding:0 3px;margin-left:83px;margin-top:-44px;position:absolute;-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px}
+.changelogx .blog-post-pointer{background-color:#fcffea;font-size:11px;padding:0 3px;margin-left:93px;margin-top:-44px;position:absolute;-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px}
 .changelogx .sticker{float:left;width:80px;display:block;text-align:right;background:none}
 .changelogx .sticker b{color:#fff;font-weight:bold;padding:2px 6px 2px 6px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;font-size:10px;position:relative;top:-1px}
 .changelogx .fixed b{background-color:#00a825}
@@ -707,7 +707,7 @@ div#gsfn_list_widget span.time{color:#999;margin-left:3px}
 #main-offer .main-box:hover .title{color:#0f56b3 !important}
 #main-offer .main-box:hover .icon{-webkit-transform:scale(1.15);-moz-transform:scale(1.15);-o-transform:scale(1.15);transform:scale(1.15)}
 #main-offer .totalfinder .face{background:transparent url("http://static.binaryage.com/f848bf09_shared_img_icons_totalfinder-256.png") no-repeat 0 0 !important;width:256px;height:256px;display:block;position:absolute;}
-#main-offer .totalspaces .face{background:transparent url("http://static.binaryage.com/2f95233e_shared_img_icons_totalspaces-256.png") no-repeat 0 0 !important;width:256px;height:256px;display:block;position:absolute;}
+#main-offer .totalspaces2 .face{background:transparent url("http://static.binaryage.com/28a715a3_shared_img_icons_totalspaces2-256.png") no-repeat 0 0 !important;width:256px;height:256px;display:block;position:absolute;}
 #free-software .top-divider{background:transparent url("http://static.binaryage.com/cbbb5804_shared_img2_assets.png") no-repeat 0 -535px !important;width:950px;height:27px;display:block;position:absolute;position:relative;}
 #free-software .bottom-divider{background:transparent url("http://static.binaryage.com/cbbb5804_shared_img2_assets.png") no-repeat 0 -576px !important;width:950px;height:22px;display:block;position:absolute;position:relative;}
 #free-software .labs-button{display:block;margin:0;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;display:inline-block;text-decoration:none;position:relative;cursor:pointer;font:bold 20px 'Play',arial,serif;color:#8d9198;border:1px solid #ccc;padding:2px 0 2px 0;text-shadow:#fff 0 1px 1px;-webkit-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;border-radius:8px;min-height:38px;line-height:38px;margin-bottom:12px;-webkit-box-shadow:0 1px 4px #ccc;-moz-box-shadow:0 1px 4px #ccc;-o-box-shadow:0 1px 4px #ccc;box-shadow:0 1px 4px #ccc;background-color:#fff;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #f4f4f4));background:-moz-linear-gradient(top, #fff 0%, #f4f4f4 100%);background:linear-gradient(top, #fff 0%, #f4f4f4 100%);-webkit-transition:all .5s ease 0;-moz-transition:all .5s ease 0;-o-transition:all .5s ease 0;transition:all .5s ease 0;font:bold 10px 'Play',arial,serif;color:#8d9198;height:22px;min-height:22px;-webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 2px #ccc;-moz-box-shadow:0 1px 2px #ccc;-o-box-shadow:0 1px 2px #ccc;box-shadow:0 1px 2px #ccc;padding:0 4px;position:absolute;top:194px;left:416px}
@@ -955,7 +955,11 @@ div#gsfn_list_widget span.time{color:#999;margin-left:3px}
 .webkit #content-totalfinder .more-info .product-button-changes .trial-note,.gecko #content-totalfinder .more-info .product-button-changes .trial-note,.opera #content-totalfinder .more-info .product-button-changes .trial-note{display:block}
 #product-totalspaces .screenshot-box img{position:absolute;left:-24px;max-width:none}
 #product-totalspaces .screenshot-box .zoom-icon{position:absolute;top:40%;left:42%}
-#content-totalspaces{margin-top:100px;position:relative;}
+#ts2-notice{margin-top:30px;position:relative;font-size:20px}
+.upgrade-input{width:590px;height:30px;border:1px solid #999;padding:5px;font-size:24px}
+.upgrade-form{margin-top:-20px}
+.upgrade-submit{width:100px;font-size:24px}
+#content-totalspaces{margin-top:60px;position:relative;}
 #content-totalspaces .social-box{position:absolute;left:662px;top:260px}
 #content-totalspaces .features-separator{background:transparent url("http://static.binaryage.com/cbbb5804_shared_img2_assets.png") no-repeat 0 -430px !important;width:950px;height:30px;display:block;position:absolute;position:relative;}
 #content-totalspaces .highlights{margin-top:0;}
@@ -965,8 +969,10 @@ div#gsfn_list_widget span.time{color:#999;margin-left:3px}
 #content-totalspaces .highlights .highlight .highlight-icon.hoverable:hover{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);border-color:#0f56b3}
 #content-totalspaces .highlights .highlight .highlight-icon div{width:60px;height:60px}
 #content-totalspaces .highlights .highlight .highlight-icon .thumb-grid{background-image:url("/images/thumb-grid.png")}
+#content-totalspaces .highlights .highlight .highlight-icon .thumb-grid2{background-image:url("/images/thumb-grid2.png")}
 #content-totalspaces .highlights .highlight .highlight-icon .thumb-overview{background-image:url("/images/thumb-overview.png")}
 #content-totalspaces .highlights .highlight .highlight-icon .thumb-transitions{background-image:url("/images/thumb-transitions.png")}
+#content-totalspaces .highlights .highlight .highlight-icon .thumb-transitions2{background-image:url("/images/thumb-transitions2.png")}
 #content-totalspaces .highlights .highlight .highlight-icon .thumb-swipe{background-image:url("/images/thumb-swipe.png")}
 #content-totalspaces .highlights .highlight .highlight-icon .thumb-hotcorners{background-image:url("/images/thumb-hotcorners.png")}
 #content-totalspaces .highlights .highlight .highlight-icon .thumb-app-assignments{background-image:url("/images/thumb-app-assignments.png")}
