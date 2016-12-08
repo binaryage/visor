@@ -1,23 +1,18 @@
 ---
-layout: product
+layout: product-home
 title: Visor is a system-wide terminal accessible via a hot-key
 product: visor
 product_title: Visor
 product_subtitle: a system-wide terminal on a hot-key
+product_icon: /shared/img/icons/visor-256.png
 download: http://totalterminal.binaryage.com
 downloadtitle: Switch to TotalTerminal
-buttonicon: warning
-downloadsubtitle: Visor has been renamed to TotalTerminal
 repo: http://github.com/darwin/visor
 meta_title: Visor is a system-wide terminal accessible via a hot-key
 meta_keywords: visor,terminal,osx,simbl,binaryage,productivity,software
 meta_description: Visor is just a light-weight plugin for Terminal.app (SIMBL)
-meta_image: http://www.binaryage.com/shared/img/icons/visor-256.png
-facebook: 1
-retweet: 1
-buzz: 1
-fbsdk: 1
-flattr: http://visor.binaryage.com
+meta_image: /shared/img/icons/visor-256.png
+build_tabs: 1 
 ogmeta: {
     site_name: "BinaryAge website",
     description: "Visor is a system-wide terminal for OSX available on a hot-key",
@@ -27,14 +22,21 @@ ogmeta: {
     url: "http://visor.binaryage.com",
     image: "http://www.binaryage.com/shared/img/icons/visor-256.png"
 }
-shots: [{
-    title: "Visor Terminal with nice colors!",
-    thumb: "/shared/img/visor-mainshot.png",
-    full: "/shared/img/visor-mainshot-full.png"
-}]
 ---
 
+{% contentfor product-buttons %}
+<div class="product-buttons">
+  <div class="button-container">
+    <a href="{{page.download}}" id="o-download-button" class="button product-button-download">
+      <span><i class="fa fa-warning fa-lg"></i>{{page.downloadtitle}}</span>
+    </a>
+  </div>
+</div>
+{% endcontentfor %}
+
 ## Visor retired
+
+<a href="/shared/img/visor-mainshot-full.png">"<img src="/shared/img/visor-mainshot-full.png"></a>
 
 #### Visor has a [new home](http://totalterminal.binaryage.com) and it is called **TotalTerminal** now.
 
