@@ -279,13 +279,6 @@ You may disable this in Visor Preferences. Note: Spaces configuration for Termin
   * **[Re-enabling Visor in Snow Leopard](http://terrychay.com/blog/article/visor-in-snow-leopard.shtml)** by Terry Chay
   * Featured Project in **[Rebase #13](http://github.com/blog/346-github-rebase-13)**, thanks [qrush](http://github.com/qrush)!
   
-## Special Guest
-
-### Ben Stiglitz about Terminal.app
-
-<div>Ben is the author of Terminal.app. Kudos!</div>
-<embed src='http://rubyconf2008.confreaks.com/player.swf' height='260' width='640' allowscriptaccess='always' allowfullscreen='true' flashvars='file=http%3A%2F%2Frubyconf2008.confreaks.com%2Fvideos%2Fterminalapp-small.mp4&image=images%2Fterminalapp-preview.jpg&plugins=viral-1'/>
-
 [darwin]: http://github.com/darwin
 [torsten]: http://github.com/torsten
 [pumpkin]: http://github.com/pumpkin
