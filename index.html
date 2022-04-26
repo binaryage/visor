@@ -5,7 +5,7 @@
     <link rel="canonical" href="https://visor.binaryage.com/"/>
     <link rel="shortcut icon" href="https://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
     <link rel="icon" href="https://static.binaryage.com/5604bda0_favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://static.binaryage.com/26f8d85b_shared_css_site.css" type="text/css"/>
+    <link rel="stylesheet" href="https://static.binaryage.com/493de12c_shared_css_site.css" type="text/css"/>
     <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
     <script>WebFont.load({google:{families:["Play:400,700:latin"]}})</script>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
@@ -24,9 +24,9 @@
     <meta property="og:url" content="http://visor.binaryage.com"/>
     <meta property="og:image" content="http://www.binaryage.com/shared/img/icons/visor-256.png"/>
     <link href="https://feeds.feedburner.com/binaryage-blog" type="application/atom+xml" rel="alternate" title="Ideas from BinaryAge"/>
-    <script>function defer$(e){if(window.jQuery){e()}else{setTimeout(function(){defer$(e)},50)}}</script>
+    <script>function defer$(e){window.jQuery?e():setTimeout(function(){defer$(e)},50)}</script>
   </head>
-  <body id="page-visor-index">
+  <body id="page-visor-index" class="site-visor">
     <div id="header">
       <div class="container">
         <div class="row">
@@ -61,7 +61,6 @@
             </div>
             <div class="relativize">
               <ul class="header-menu menu-selected-products">
-                <li class="menu-item-store"><a href="https://sites.fastspring.com/binaryage/product/store"><i class="fa fa-shopping-cart"></i><span>store</span></a></li>
                 <li class="menu-item-products"><a href="//www.binaryage.com"><i class="fa fa-star"></i><span>products</span></a></li>
                 <li class="menu-item-blog"><a href="//blog.binaryage.com"><i class="fa fa-bullhorn"></i><span>blog</span></a></li>
                 <li class="menu-item-support"><a href="//discuss.binaryage.com"><i class="fa fa-comments"></i><span>support</span></a></li>
@@ -109,183 +108,219 @@
       </div>
       <div id="visor-content" class="product-content" style="display:none">
         <div class="container">
-          <h2>Visor retired</h2>
-          <p><a href="https://static.binaryage.com/a5de11df_shared_img_visor-mainshot-full.png">"<img src="https://static.binaryage.com/a5de11df_shared_img_visor-mainshot-full.png"/></a></p>
-          <h4>Visor has a <a href="http://totalterminal.binaryage.com">new home</a> and it is called <strong>TotalTerminal</strong> now.</h4>
-          <p>Don't worry it is still open-source and I will continue to support TotalTerminal in the future.</p>
-          <h2>Installation</h2>
+          <h2 id="visor-retired">Visor retired</h2>
+          <p><a href="https://static.binaryage.com/a5de11df_shared_img_visor-mainshot-full.png">“<img src="https://static.binaryage.com/a5de11df_shared_img_visor-mainshot-full.png"/></a></p>
+          <h4 id="visor-has-a-new-home-and-it-is-called-totalterminal-now">Visor has a <a href="http://totalterminal.binaryage.com">new home</a> and it is called <strong>TotalTerminal</strong> now.</h4>
+          <p>Don’t worry it is still open-source and I will continue to support TotalTerminal in the future.</p>
+          <h2 id="installation">Installation</h2>
           <ol>
             <li><strong><a href="http://www.culater.net/software/SIMBL/SIMBL.php">Install SIMBL</a></strong> and <span style="color:#d22">make sure you have latest SIMBL 0.9.x</span></li>
-            <li>Place Visor.bundle into <code>~/Library/Application Support/SIMBL/Plugins</code> (create this directory if it does not already exist)</li>
+            <li>Place Visor.bundle into <code class="language-plaintext highlighter-rouge">~/Library/Application Support/SIMBL/Plugins</code> (create this directory if it does not already exist)</li>
             <li>Relaunch Terminal.app - You should now see the Visor Status Menu Item</li>
-            <li>Configure your keyboard trigger by selecting the Visor Status Menu Item -> <code>Visor Preferences ...</code> and edit your keyboard <code>hot-key</code></li>
+            <li>Configure your keyboard trigger by selecting the Visor Status Menu Item -&gt; <code class="language-plaintext highlighter-rouge">Visor Preferences ...</code> and edit your keyboard <code class="language-plaintext highlighter-rouge">hot-key</code></li>
           </ol>
-          <h4>You can now trigger Visor with your hot-key from any application to get an instant terminal session.</h4>
+          <h4 id="you-can-now-trigger-visor-with-your-hot-key-from-any-application-to-get-an-instant-terminal-session">You can now trigger Visor with your hot-key from any application to get an instant terminal session.</h4>
           <p>To hide Visor, you can either:</p>
           <ul>
             <li>re-trigger with your key-combo</li>
             <li>optionally, you can click off the Visor window</li>
           </ul>
-          <h3>Compatibility</h3>
+          <h3 id="compatibility">Compatibility</h3>
           <ul>
-            <li><p><strong>Visor 2.2</strong> is tested to work with</p>
+            <li><strong>Visor 2.2</strong> is tested to work with
               <ul>
                 <li>SIMBL 0.9.x on Snow Leopard (both 32-bit and 64-bit)</li>
                 <li>SIMBL 0.8.x on Leopard (32-bit)</li>
               </ul>
             </li>
-            <li><p><strong>Visor 2.1</strong> is tested to work with</p>
+            <li><strong>Visor 2.1</strong> is tested to work with
               <ul>
                 <li>SIMBL 0.9.x on Snow Leopard (both 32-bit and 64-bit)</li>
                 <li>SIMBL 0.8.x on Leopard (32-bit)</li>
               </ul>
             </li>
-            <li><p><strong>Visor 2.0</strong> is tested to work with</p>
+            <li><strong>Visor 2.0</strong> is tested to work with
               <ul>
                 <li>SIMBL 0.8.x on Snow Leopard but Terminal.app has to be forced to run in 32-bit mode</li>
                 <li>SIMBL 0.8.x on Leopard</li>
               </ul>
             </li>
-            <li><p><strong>Visor 1.9</strong> is tested to work with</p>
+            <li><strong>Visor 1.9</strong> is tested to work with
               <ul>
                 <li>SIMBL 0.8.x on Leopard</li>
               </ul>
             </li>
           </ul>
           <p><strong><a href="http://github.com/darwin/visor/downloads">Where can I get older versions?</a></strong></p>
-          <h2>Source</h2>
-          <h3>Installation from source</h3>
-          <h4>Prerequisities:</h4>
+          <h2 id="source">Source</h2>
+          <h3 id="installation-from-source">Installation from source</h3>
+          <h4 id="prerequisities">Prerequisities:</h4>
           <ul>
             <li><a href="http://www.culater.net/software/SIMBL/SIMBL.php">SIMBL</a></li>
             <li>ruby + rubygems</li>
             <li>XCode 3.2+</li>
             <li>zip/unzip</li>
           </ul>
-          <h4>Custom installation steps:</h4>
-          <pre><code>git clone git://github.com/darwin/visor.git
+          <h4 id="custom-installation-steps">Custom installation steps:</h4>
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/darwin/visor.git
 cd visor
 rake
 rake install
-</code></pre>
+</code></pre></div></div>
           <p>Feel free to <a href="http://github.com/darwin/visor">fork and contribute</a>.</p>
           <p>Source code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a></p>
-          <h2>FAQ</h2>
-          <h4>I like the idea, but I want to use Terminal.app features. Do you plan to support tabs/unicode/whatever?</h4>
-          <blockquote><p>Visor is just a light-weight plugin for Terminal.app (SIMBL). You should be able to use most of Terminal.app features with Visor. The only broken feature is "Windows Groups".</p></blockquote>
-          <h4>Does Visor work on OSX 10.6 (Snow Leopard)?</h4>
-          <blockquote><p>64-bit Terminal.app in Snow Leopard is supported by Visor 2.1 and later.</p></blockquote>
-          <h4>Does Visor work on OSX 10.5 (Leopard)?</h4>
-          <blockquote><p>Leopard is supported by Visor 1.5 and later, the best version is Visor 2.1.</p></blockquote>
-          <h4>Does Visor work on OSX 10.4 (Tiger)?</h4>
-          <blockquote><p>Tiger was supported by early Visors (pre 1.5). It was in the days when I was a young Windows hacker. I will never look back, so your only chance is to upgrade to (Snow) Leopard.</p></blockquote>
-          <h4>How do I uninstall Visor?</h4>
-          <blockquote><p>Visor is a standard SIMBL plugin. Remove <code>Visor.bundle</code> from <code>~/Library/Application Support/SIMBL/Plugins</code>:</p></blockquote>
-          <pre><code>rm -rf ~/Library/Application\ Support/SIMBL/Plugins/Visor.bundle
-</code></pre>
-          <blockquote><p>Or alternatively you can run <code>rake uninstall</code> task if you have a cloned git repo.</p></blockquote>
-          <h4>Where are Visor settings stored?</h4>
-          <blockquote><p>Visor settings are stored with Terminal.app settings. You can <code>open ~/Library/Preferences/com.apple.Terminal.plist</code> and tweak the values (better to do this when Terminal.app is not running).
-          If you have troubles with Visor settings or the generated Visor profile, delete this file and restart Terminal.app. The file will be recreated with default values.</p></blockquote>
-          <h4>My Visor menu-bar icon is dimmed out. My hot-key doesn't work and just beeps. What's wrong?</h4>
-          <blockquote><p>There can be only one visor-ed terminal window in the system. If you close this terminal window (for example <code>Control+D</code> or typing exit in shell), Visor gets into the disabled state you are describing. Just open a new terminal window and it gets visor-ed again. You can do this for example by clicking on Terminal.app icon in the Dock.</p></blockquote>
-          <h4>How can I open a new terminal window the old way, as a classic OSX window?</h4>
-          <blockquote><p>If there is a visor-ed terminal window (Visor menu-bar icon is active) every new terminal window will be opened as a classic OSX window. In other words, open at least two terminal windows. The second one will be classic terminal window for sure.</p></blockquote>
-          <h4>How can I change the height of Visor?</h4>
-          <blockquote><p>Go to Terminal.app's Preferences -> Window -> Rows</p></blockquote>
-          <h4>How can I stick Visor to left screen edge?</h4>
-          <blockquote><p>Look for the "Position" option in Visor Preferences and pick "Left-Stretch" window placement.</p></blockquote>
-          <h4>How can I change the width of Visor?</h4>
-          <blockquote><p>By default Visor window stretches to the full screen width. Set some non-stretching positioning for Visor window in Visor Preferences, then Go to Terminal.app's Preferences -> Window -> Columns.</p></blockquote>
-          <h4>Is it possible to show Visor only on a secondary monitor?</h4>
-          <blockquote><p>Go to Visor Preferences -> Screen</p></blockquote>
-          <h4>Is it possible to see Visor on every Space?</h4>
-          <blockquote><p>Visor 1.6 does not respect Spaces settings (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=52">Issue 52</a>). Visor 1.7+ forces its window to be visible on every space.
-          You may disable this in Visor Preferences. Note: Spaces configuration for Terminal.app doesn't apply to the visor-ed terminal window, it is effective only for other (classic) terminal windows.</p></blockquote>
-          <h4>I want to keep different preferences for Visor and other (classic) terminal windows. What is the best way manage this?</h4>
-          <blockquote><p>Well this was quite a pain point in older Visor releases. From Visor 2.0 there must be a profile in Terminal.app called "Visor". Visor-ed window always use the "Visor" profile for opening new tabs
-          (regardless of "default profile" or "startup profile" settings in Terminal.app). To make your life easier Visor creates this profile for you if it does not exist and fills in Darwin's preferred Visor settings (black background with fine colors, 90% opacity).</p></blockquote>
-          <h4>How can I revert to Darwin's Visor profile?</h4>
-          <blockquote><p>You can always delete (or better rename) the "Visor" profile and relaunch Terminal.app. Visor will then create a new "Visor" profile from scratch with Darwin's preferred settings.</p></blockquote>
-          <h4>Do I need to install TerminalColours SIMBL with Visor?</h4>
-          <blockquote><p>No, TerminalColours is integrated into Visor 2.0 and later. My motivation was to allow people to get cool Visor colors out of the box (with generated Visor profile).</p></blockquote>
-          <h4>Do I need to install CopyOnSelect SIMBL with Visor?</h4>
-          <blockquote><p>No, CopyOnSelect is integrated into Visor 2.0 and later. It is a configurable option in Visor Preferences (disabled by default).</p></blockquote>
-          <h2>Changelog</h2>
-          <h4>The original Visor 1.5 brought to you by Alcor (<a href="http://blacktree.com">Blacktree</a>), kudos man!</h4>
-          <h3>History</h3>
+          <h2 id="faq">FAQ</h2>
+          <h4 id="i-like-the-idea-but-i-want-to-use-terminalapp-features-do-you-plan-to-support-tabsunicodewhatever">I like the idea, but I want to use Terminal.app features. Do you plan to support tabs/unicode/whatever?</h4>
+          <blockquote>
+            <p>Visor is just a light-weight plugin for Terminal.app (SIMBL). You should be able to use most of Terminal.app features with Visor. The only broken feature is “Windows Groups”.</p>
+          </blockquote>
+          <h4 id="does-visor-work-on-osx-106-snow-leopard">Does Visor work on OSX 10.6 (Snow Leopard)?</h4>
+          <blockquote>
+            <p>64-bit Terminal.app in Snow Leopard is supported by Visor 2.1 and later.</p>
+          </blockquote>
+          <h4 id="does-visor-work-on-osx-105-leopard">Does Visor work on OSX 10.5 (Leopard)?</h4>
+          <blockquote>
+            <p>Leopard is supported by Visor 1.5 and later, the best version is Visor 2.1.</p>
+          </blockquote>
+          <h4 id="does-visor-work-on-osx-104-tiger">Does Visor work on OSX 10.4 (Tiger)?</h4>
+          <blockquote>
+            <p>Tiger was supported by early Visors (pre 1.5). It was in the days when I was a young Windows hacker. I will never look back, so your only chance is to upgrade to (Snow) Leopard.</p>
+          </blockquote>
+          <h4 id="how-do-i-uninstall-visor">How do I uninstall Visor?</h4>
+          <blockquote>
+            <p>Visor is a standard SIMBL plugin. Remove <code class="language-plaintext highlighter-rouge">Visor.bundle</code> from <code class="language-plaintext highlighter-rouge">~/Library/Application Support/SIMBL/Plugins</code>:</p>
+          </blockquote>
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf ~/Library/Application\ Support/SIMBL/Plugins/Visor.bundle
+</code></pre></div></div>
+          <blockquote>
+            <p>Or alternatively you can run <code class="language-plaintext highlighter-rouge">rake uninstall</code> task if you have a cloned git repo.</p>
+          </blockquote>
+          <h4 id="where-are-visor-settings-stored">Where are Visor settings stored?</h4>
+          <blockquote>
+            <p>Visor settings are stored with Terminal.app settings. You can <code class="language-plaintext highlighter-rouge">open ~/Library/Preferences/com.apple.Terminal.plist</code> and tweak the values (better to do this when Terminal.app is not running).
+            If you have troubles with Visor settings or the generated Visor profile, delete this file and restart Terminal.app. The file will be recreated with default values.</p>
+          </blockquote>
+          <h4 id="my-visor-menu-bar-icon-is-dimmed-out-my-hot-key-doesnt-work-and-just-beeps-whats-wrong">My Visor menu-bar icon is dimmed out. My hot-key doesn’t work and just beeps. What’s wrong?</h4>
+          <blockquote>
+            <p>There can be only one visor-ed terminal window in the system. If you close this terminal window (for example <code class="language-plaintext highlighter-rouge">Control+D</code> or typing exit in shell), Visor gets into the disabled state you are describing. Just open a new terminal window and it gets visor-ed again. You can do this for example by clicking on Terminal.app icon in the Dock.</p>
+          </blockquote>
+          <h4 id="how-can-i-open-a-new-terminal-window-the-old-way-as-a-classic-osx-window">How can I open a new terminal window the old way, as a classic OSX window?</h4>
+          <blockquote>
+            <p>If there is a visor-ed terminal window (Visor menu-bar icon is active) every new terminal window will be opened as a classic OSX window. In other words, open at least two terminal windows. The second one will be classic terminal window for sure.</p>
+          </blockquote>
+          <h4 id="how-can-i-change-the-height-of-visor">How can I change the height of Visor?</h4>
+          <blockquote>
+            <p>Go to Terminal.app’s Preferences -&gt; Window -&gt; Rows</p>
+          </blockquote>
+          <h4 id="how-can-i-stick-visor-to-left-screen-edge">How can I stick Visor to left screen edge?</h4>
+          <blockquote>
+            <p>Look for the “Position” option in Visor Preferences and pick “Left-Stretch” window placement.</p>
+          </blockquote>
+          <h4 id="how-can-i-change-the-width-of-visor">How can I change the width of Visor?</h4>
+          <blockquote>
+            <p>By default Visor window stretches to the full screen width. Set some non-stretching positioning for Visor window in Visor Preferences, then Go to Terminal.app’s Preferences -&gt; Window -&gt; Columns.</p>
+          </blockquote>
+          <h4 id="is-it-possible-to-show-visor-only-on-a-secondary-monitor">Is it possible to show Visor only on a secondary monitor?</h4>
+          <blockquote>
+            <p>Go to Visor Preferences -&gt; Screen</p>
+          </blockquote>
+          <h4 id="is-it-possible-to-see-visor-on-every-space">Is it possible to see Visor on every Space?</h4>
+          <blockquote>
+            <p>Visor 1.6 does not respect Spaces settings (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=52">Issue 52</a>). Visor 1.7+ forces its window to be visible on every space.
+            You may disable this in Visor Preferences. Note: Spaces configuration for Terminal.app doesn’t apply to the visor-ed terminal window, it is effective only for other (classic) terminal windows.</p>
+          </blockquote>
+          <h4 id="i-want-to-keep-different-preferences-for-visor-and-other-classic-terminal-windows-what-is-the-best-way-manage-this">I want to keep different preferences for Visor and other (classic) terminal windows. What is the best way manage this?</h4>
+          <blockquote>
+            <p>Well this was quite a pain point in older Visor releases. From Visor 2.0 there must be a profile in Terminal.app called “Visor”. Visor-ed window always use the “Visor” profile for opening new tabs
+            (regardless of “default profile” or “startup profile” settings in Terminal.app). To make your life easier Visor creates this profile for you if it does not exist and fills in Darwin’s preferred Visor settings (black background with fine colors, 90% opacity).</p>
+          </blockquote>
+          <h4 id="how-can-i-revert-to-darwins-visor-profile">How can I revert to Darwin’s Visor profile?</h4>
+          <blockquote>
+            <p>You can always delete (or better rename) the “Visor” profile and relaunch Terminal.app. Visor will then create a new “Visor” profile from scratch with Darwin’s preferred settings.</p>
+          </blockquote>
+          <h4 id="do-i-need-to-install-terminalcolours-simbl-with-visor">Do I need to install TerminalColours SIMBL with Visor?</h4>
+          <blockquote>
+            <p>No, TerminalColours is integrated into Visor 2.0 and later. My motivation was to allow people to get cool Visor colors out of the box (with generated Visor profile).</p>
+          </blockquote>
+          <h4 id="do-i-need-to-install-copyonselect-simbl-with-visor">Do I need to install CopyOnSelect SIMBL with Visor?</h4>
+          <blockquote>
+            <p>No, CopyOnSelect is integrated into Visor 2.0 and later. It is a configurable option in Visor Preferences (disabled by default).</p>
+          </blockquote>
+          <h2 id="changelog">Changelog</h2>
+          <h4 id="the-original-visor-15-brought-to-you-by-alcor-blacktree-kudos-man">The original Visor 1.5 brought to you by Alcor (<a href="http://blacktree.com">Blacktree</a>), kudos man!</h4>
+          <h3 id="history">History</h3>
           <ul>
-            <li><p><strong>v2.2</strong> (26.09.2009) code name: <strong>Stable Visor</strong></p>
+            <li><strong>v2.2</strong> (26.09.2009) code name: <strong>Stable Visor</strong>
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] fixed crash when <a href="http://github.com/darwin/visor/issues/closed#issue/37">changing display settings</a> or <a href="http://github.com/darwin/visor/issues/closed#issue/38">fast-switching user</a></li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] fixed some <a href="http://github.com/darwin/visor/issues/closed#issue/33">redrawing issues</a></li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] using new API on Snow Leopard for returning focus to previous application (not using applescript => faster!)</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] using new API on Snow Leopard for returning focus to previous application (not using applescript =&gt; faster!)</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] fixed rake tasks, xcodebuild might fail in some rare situations</li>
               </ul>
             </li>
-            <li><p><strong>v2.1</strong> (21.09.2009) code name: <strong>Lovely Visor</strong> &lt;= <a href="http://code.google.com/p/qsb-mac/">Google's QSB</a> codebase made this release possible!</p>
+            <li><strong>v2.1</strong> (21.09.2009) code name: <strong>Lovely Visor</strong> &lt;= <a href="http://code.google.com/p/qsb-mac/">Google’s QSB</a> codebase made this release possible!
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] support for SIMBL 0.9.x</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] 64-bit version for 64-bit Terminal.app in Snow Leopard</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] embedded Visor preferences pane into Terminal.app Preferences Window</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] you can activate Visor by double tapping Control key (disabled by default)</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] generated Visor profile does not use bold bright fonts</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] resetting window size is performed only in rare cases of visor reconfiguration (fixed <a href="http://github.com/darwin/visor/issues/closed#issue/27">headaches with 'jumping lines'</a>, also fixed <a href="http://github.com/darwin/visor/issues/closed/#issue/13">performance issue</a>)</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] 'restore app key focus' applescript checks if app which has to be restored is still alive (prevents <a href="http://github.com/darwin/visor/issues/closed#issue/8">reopening closed app when leaving Visor</a>)</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] resetting window size is performed only in rare cases of visor reconfiguration (fixed <a href="http://github.com/darwin/visor/issues/closed#issue/27">headaches with ‘jumping lines’</a>, also fixed <a href="http://github.com/darwin/visor/issues/closed/#issue/13">performance issue</a>)</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] ‘restore app key focus’ applescript checks if app which has to be restored is still alive (prevents <a href="http://github.com/darwin/visor/issues/closed#issue/8">reopening closed app when leaving Visor</a>)</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] removed dependency on QuartzCore.framework</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] XCode project cleanup, executable now includes binaries for x86_64, i386 and ppc architectures</li>
               </ul>
             </li>
-            <li><p><strong>v2.0.1</strong> (11.09.2009)</p>
+            <li><strong>v2.0.1</strong> (11.09.2009)
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Fixed resizing issue (<a href="http://github.com/darwin/visor/issues/closed#issue/22">Issue #22</a>)</li>
               </ul>
             </li>
-            <li><p><strong>v2.0</strong> (06.09.2009) code name: <strong>Snow Visor</strong></p>
+            <li><strong>v2.0</strong> (06.09.2009) code name: <strong>Snow Visor</strong>
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Compatibility with OSX 10.6 (Snow Leopard)</li>
                 <li>[<a href="http://github.com/ciaran">ciaran</a>+<a href="http://github.com/evanphx">evanphx</a>+<a href="http://github.com/darwin">darwin</a>] integrated <a href="http://ciaranwal.sh/2007/11/01/customising-colours-in-leopard-terminal">Terminal Colours SIMBL</a></li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Visor uses profile "Visor" or creates a new one if it does not exist (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=71">Issue 57</a>, <a href="http://github.com/darwin/visor/issues/closed#issue/19">Issue #19</a>).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] "Visor" profile is created with finest settings from Darwin's Visor profile including setup for Terminal Colours (black background with fine colors, 90% opacity)</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Visor uses profile “Visor” or creates a new one if it does not exist (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=71">Issue 57</a>, <a href="http://github.com/darwin/visor/issues/closed#issue/19">Issue #19</a>).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] “Visor” profile is created with finest settings from Darwin’s Visor profile including setup for Terminal Colours (black background with fine colors, 90% opacity)</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Visor stays hidden after Terminal.app launch (seamless experience when including Terminal.app into startup items)</li>
                 <li>[<a href="http://github.com/genki">genki</a>+<a href="http://github.com/darwin">darwin</a>] integrated <a href="http://github.com/genki/terminalcopyonselect">CopyOnSelect SIMBL</a></li>
               </ul>
             </li>
-            <li><p><strong>v1.9.1</strong> (14.04.2009)</p>
+            <li><strong>v1.9.1</strong> (14.04.2009)
               <ul>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Fixed missing "Visor Preferences..." menu item (thanks <a href="http://github.com/gestes">gestes</a>).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Fixed missing “Visor Preferences…” menu item (thanks <a href="http://github.com/gestes">gestes</a>).</li>
               </ul>
             </li>
-            <li><p><strong>v1.9</strong> (14.04.2009)</p>
+            <li><strong>v1.9</strong> (14.04.2009)
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Fixed bottom window is off-screen in left-stretch/right stretch mode (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=60">Issue 60</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Window size gets properly reset during switching Position in Preferences.</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Added "Full Screen" option into Positions in Preferences (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=57">Issue 57</a>).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Added “Full Screen” option into Positions in Preferences (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=57">Issue 57</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Debug messages are not being logged in Release builds.</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Visor restores focus of previous app only in case of closing with hotkey or ESC key (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=67">Issue 67</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Visor does not hang when trying to return focus to a hanging application (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=64">Issue 64</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Going to an empty space no more triggers visor terminal to appear (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=58">Issue 58</a>).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Menu item changes title to "Hide Visor" when Visor is opened (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=43">Issue 43</a>).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Menu item changes title to “Hide Visor” when Visor is opened (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=43">Issue 43</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Fixed: Switching Space let Visor show and hide in an infinite loop (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=61">Issue 61</a>).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Removed option "Main Screen" from Preferences/Screen (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=59">Issue 59</a>).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Removed option “Main Screen” from Preferences/Screen (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=59">Issue 59</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Removed pin icon, toggle added under status menu (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=56">Issue 56</a>).</li>
               </ul>
             </li>
-            <li><p><strong>v1.8.1</strong> (05.03.2009)</p>
+            <li><strong>v1.8.1</strong> (05.03.2009)
               <ul>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Fixed "NSUserDefaults setString:ForKey:" crash on startup (affected upgrading users from 1.7 to 1.8). Reported by <a href="http://github.com/kleinman">Kleinman</a>, thanks.</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Fixed “NSUserDefaults setString:ForKey:” crash on startup (affected upgrading users from 1.7 to 1.8). Reported by <a href="http://github.com/kleinman">Kleinman</a>, thanks.</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Compilation from sources clears previous build folder (this could possibly make troubles for people developing Visor and then doing release [like me]).</li>
               </ul>
             </li>
-            <li><p><strong>v1.8</strong> (04.03.2009)</p>
+            <li><strong>v1.8</strong> (04.03.2009)
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>+<a href="http://github.com/cglee">cglee</a>] Visor can be positioned to other screen edges. Also non-stretching mode is possible. See Position in Visor Preferences.</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Visor window can be pinned, so it doesn't auto-hide (see icon in the top-right window corner).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Visor window can be pinned, so it doesn’t auto-hide (see icon in the top-right window corner).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Better behavior of confirmation sheets (Previously, sheet might appear on different space or might be hidden behind Visor window).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Custom build from sources is marked as "Custom", no need to specify version.</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Custom build from sources is marked as “Custom”, no need to specify version.</li>
               </ul>
             </li>
-            <li><p><strong>v1.7</strong> (12.02.2009)</p>
+            <li><strong>v1.7</strong> (12.02.2009)
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Visor appears on every space by default. You may disable it in Visor Preferences.</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Visor is correctly hidden in fullscreen mode.</li>
@@ -294,33 +329,33 @@ rake install
                 <li>[<a href="http://github.com/blinks">blinks</a>] Fixed rake install task for case there is no SIMBL plugins directory.</li>
               </ul>
             </li>
-            <li><p><strong>v1.6</strong> (03.02.2009)</p>
+            <li><strong>v1.6</strong> (03.02.2009)
               <ul>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Build infrastructure.</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] It is possible to specify on which screen visor will appear - see preferences (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=15">Issue 15</a>).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Visor exits gratefully without locking UI (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=50">Issue 50</a>).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Visor becomes inactive when you close visor-ed terminal window or exit it's shell (fixes <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=10">Issue 10</a>).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] When inactive, Visor eats next coming terminal window (right click terminal.app icon and select "new window").</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Visor becomes inactive when you close visor-ed terminal window or exit it’s shell (fixes <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=10">Issue 10</a>).</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] When inactive, Visor eats next coming terminal window (right click terminal.app icon and select “new window”).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Re-implemented window sliding animation using standard NSWindow functions, should fix weird bugs with mouse cursor state.</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Removed support for Quartz powered backgrounds (want simpler codebase!).</li>
                 <li>[<a href="http://github.com/darwin">darwin</a>] Gentle terminal window hijacking (solves <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=5">Issue 5</a>, <a href="http://code.google.com/p/blacktree-visor/issues/detail?id=6">Issue 6</a> and related problems. What more? It properly enables <a href="http://onrails.org/articles/2007/11/28/scripting-the-leopard-terminal">applescript automation in visor-ed terminal</a>, which was my original motivation to get dirty with Visor internals).</li>
-                <li>[<a href="http://github.com/darwin">darwin</a>] Whenever you open Visor window, it steals focus and you may start typing without touching mouse. Visor is a good guy and returns the focus back to original app when being hidden. I said ... don't touch that mouse!</li>
-                <li>[<a href="http://github.com/torsten">torsten</a>] Fixed the "White Line Bug" (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=16">Issue 16</a>).</li>
-                <li>[<a href="http://github.com/torsten">torsten</a>] Added the option to hide Visor on Escape press. Press Shift+Escape, if you need a "Escape" in the Terminal.</li>
+                <li>[<a href="http://github.com/darwin">darwin</a>] Whenever you open Visor window, it steals focus and you may start typing without touching mouse. Visor is a good guy and returns the focus back to original app when being hidden. I said … don’t touch that mouse!</li>
+                <li>[<a href="http://github.com/torsten">torsten</a>] Fixed the “White Line Bug” (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=16">Issue 16</a>).</li>
+                <li>[<a href="http://github.com/torsten">torsten</a>] Added the option to hide Visor on Escape press. Press Shift+Escape, if you need a “Escape” in the Terminal.</li>
                 <li>[<a href="http://github.com/torsten">torsten</a>] If you start Visor you get now initial focus. (<a href="http://code.google.com/p/blacktree-visor/issues/detail?id=20">Issue 20</a>).</li>
               </ul>
             </li>
-            <li><p><strong>v1.5a1</strong> (Nov 2007?)</p>
+            <li><strong>v1.5a1</strong> (Nov 2007?)
               <ul>
                 <li>Leopard Support</li>
               </ul>
             </li>
-            <li><p><strong>v1.2.1</strong></p>
+            <li><strong>v1.2.1</strong>
               <ul>
                 <li>Fixed Choose File button</li>
               </ul>
             </li>
-            <li><p><strong>v1.2</strong></p>
+            <li><strong>v1.2</strong>
               <ul>
                 <li>Added Animation Speed Preferences</li>
                 <li>Added Transition Preferences for Slide and Fade (both optional)</li>
@@ -331,29 +366,30 @@ rake install
                 <li>No longer forked code - one version.</li>
               </ul>
             </li>
-            <li><p><strong>v1.1</strong> (drparallax's unsupported version?)</p>
+            <li><strong>v1.1</strong> (drparallax’s unsupported version?)
               <ul>
-                <li>Dismissing visor now 'slides up'</li>
+                <li>Dismissing visor now ‘slides up’</li>
                 <li>Options for animation</li>
                 <li>New icon</li>
               </ul>
             </li>
-            <li><p><strong>v1.0</strong></p>
+            <li><strong>v1.0</strong>
               <ul>
                 <li>Initial release</li>
               </ul>
-            <p>... hic sunt leones ...</p></li>
+              <p>… hic sunt leones …</p>
+            </li>
           </ul>
-          <h2>Links</h2>
-          <h4>Source code</h4>
+          <h2 id="links">Links</h2>
+          <h4 id="source-code">Source code</h4>
           <ul>
             <li><a href="http://github.com/darwin/visor">sources are hosted at GitHub</a></li>
           </ul>
-          <h4>Original Visor 1.5</h4>
+          <h4 id="original-visor-15">Original Visor 1.5</h4>
           <ul>
             <li><a href="http://blacktree.com">Blacktree Homepage</a></li>
           </ul>
-          <h3>Articles</h3>
+          <h3 id="articles">Articles</h3>
           <ul>
             <li><strong><a href="http://maxime.sh/2010/01/donnez-du-style-a-votre-terminal-avec-visor">Donnez du style à votre terminal avec Visor</a></strong> by Maxime</li>
             <li><strong><a href="http://www.rngtng.com/2009/08/14/quake-like-terminal-on-mac-os-x-visor-plugin/">Quake like Terminal on Mac OS X: Visor Plugin</a></strong> by Tobi</li>
@@ -383,9 +419,9 @@ rake install
         </div>
       </div>
     </div>
-    <script src="https://static.binaryage.com/0518c6ed_shared_js_code.js"></script>
-    <script type="text/javascript">window["ga"]=function(){}</script>
-    <script>window["ga"]=undefined;(function(e,n,a,t,i,o,r){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;o=n.createElement(a),r=n.getElementsByTagName(a)[0];o.async=1;o.src=t;r.parentNode.insertBefore(o,r)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-8404259-1","auto",{allowLinker:true});ga("send","pageview");ga("require","linker");ga("linker:autoLink",["fastspring.com"],true)</script>
-    <script type="text/javascript" charset="utf-8">defer$(function(){$(function(){setTimeout(function(){var i=location.hash.substring(1);if(i.substring(0,2)=="o-"){$("#"+i).trigger("click")}},500)})})</script>
+    <script src="https://static.binaryage.com/bb6250cd_shared_js_code.js"></script>
+    <script type="text/javascript">window.ga=function(){}</script>
+    <script>window.ga=undefined,function(e,n,a,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=n.createElement(a),c=n.getElementsByTagName(a)[0],o.async=1,o.src=t,c.parentNode.insertBefore(o,c)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-8404259-1","auto",{allowLinker:!0}),ga("send","pageview"),ga("require","linker"),ga("linker:autoLink",["fastspring.com"],!0)</script>
+    <script type="text/javascript" charset="utf-8">defer$(function(){$(function(){setTimeout(function(){var i=location.hash.substring(1);"o-"==i.substring(0,2)&&$("#"+i).trigger("click")},500)})})</script>
   </body>
 </html>
