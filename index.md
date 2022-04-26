@@ -88,7 +88,7 @@ To hide Visor, you can either:
 
 #### Custom installation steps:
 
-    git clone git://github.com/darwin/visor.git
+    git clone https://github.com/darwin/visor.git
     cd visor
     rake
     rake install

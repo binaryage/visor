@@ -4,3 +4,4 @@ src
 debug.log
 tmp
 .sass-cache/
+.jekyll*
